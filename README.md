@@ -2,6 +2,14 @@
 
 ,table is a shell script used to generate template for Markdown tables.
 
+## Installation
+
+Copy `,table` to anywhere where you store your scripts and give it execute permission.
+
+```shell
+chmod +x ,table
+```
+
 ## Usage
 
 ```shell
