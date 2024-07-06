@@ -1,0 +1,28 @@
+#!/bin/sh
+
+if [ -z "$1" ]
+then
+    echo "Usage: ,table [column-count]";
+    exit 1;
+else
+    # Print header line with _ as placeholder
+    for i in $(seq 1 $1);
+    do
+        printf '%s_' "|"
+    done
+    echo "|";
+
+    # Print the header separator
+    for i in $(seq 1 $1);
+    do
+        printf '%s-' "|"
+    done
+    echo "|"
+
+    # Print first row with _ as placeholder
+    for i in $(seq 1 $1);
+    do
+        printf '%s_' "|"
+    done
+    echo "|";
+fi
