@@ -1,5 +1,29 @@
 #!/bin/sh
 
+
+
+
+Help()
+{
+   echo ",table - generate Markdown tables"
+   echo
+   echo "Syntax: ,table [-h] column-count"
+   echo "options:"
+   echo "h     Print this Help."
+   echo
+   echo "arguments:"
+   echo "column-count   How many columns you want in your table"
+   echo
+}
+
+while getopts ":h" option; do
+   case $option in
+      h) # display Help
+         Help
+         exit;;
+   esac
+done
+
 if [ -z "$1" ]
 then
     echo "Usage: ,table [column-count]";
@@ -26,3 +50,5 @@ else
     done
     echo "|";
 fi
+
+exit 0;
